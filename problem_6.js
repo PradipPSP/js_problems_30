@@ -1,5 +1,7 @@
 
-// Q. Write a function to calculate the factorial of a number?
+// Q. Write a function to calculate the factorial of a number? 
+// fact(5) এর মান হবে:
+// ১ × ২ × ৩ × ৪ × ৫ = ১২০
 
 
 // function fact(n) { // এটি একটি ফাংশন যার নাম fact এবং এটি একটি প্যারামিটার n গ্রহণ করে। এখানে n হল সেই সংখ্যা যার ফ্যাক্টরিয়াল গণনা করা হবে।
