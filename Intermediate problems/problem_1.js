@@ -4,16 +4,24 @@
 // way-1
 const numbers = [50, 40, 30, 90, 100, 60, 90]
 const descendingArray = numbers.sort((a, b) => b - a); //
-console.log(descendingArray); // [100, 90, 90, 60, 50, 40, 30]
+// console.log(descendingArray); // [100, 90, 90, 60, 50, 40, 30]
 const secondLargeNum = descendingArray[1];
-console.log(secondLargeNum); // 90
+// console.log(secondLargeNum); // 90
 
 
 // way-2
+const numbers2 = [50, 40, 30, 90, 100, 60, 90]
+const descendingArray2 = numbers2.sort((a, b) => a - b); 
+const secondLargeNum2= descendingArray2[descendingArray.length-2];
+console.log(secondLargeNum2); // 90
+
+
+
+// way-3
 
 const numberArray = [10, 15, 100, 85, 5, 80]
 const sortArray = numberArray.slice().sort((a, b) => b - a);
-console.log(sortArray); // [100, 85, 80, 15, 10, 5]
+// console.log(sortArray); // [100, 85, 80, 15, 10, 5]
 let secondLarge = null;
 for(let i = 1; i < sortArray.length; i++){
     if(sortArray[i] < sortArray[0]){
@@ -21,7 +29,7 @@ for(let i = 1; i < sortArray.length; i++){
         break;
     }
 };
-console.log("Second largest element:", secondLarge !== null ? secondLarge : "No second largest element");
+// console.log("Second largest element:", secondLarge !== null ? secondLarge : "No second largest element");
 
 
 /* নিচের জাভাস্ক্রিপ্ট কোডটি একটি অ্যারের মধ্যে দ্বিতীয় সর্বোচ্চ (second largest) মান বের করার জন্য লেখা হয়েছে। নিচে প্রতিটি লাইনের ব্যাখ্যা বাংলা ভাষায় দেওয়া হলো:
