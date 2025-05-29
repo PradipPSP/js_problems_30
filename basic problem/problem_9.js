@@ -57,4 +57,15 @@ console.log(countVowels("JavaScript"));  // Output: 3
 
 function countVowels(str){
     str.toLowerCase()
+
+    const vowels = ["a", "e", "i", "o", "u"]
+    let count = 0;
+
+    for(let char of str){
+        if(vowels.includes(char)){
+            count++
+        }
+    }
+    return count;
 }
+console.log(countVowels('I Love My Country')); // 4 
