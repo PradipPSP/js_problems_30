@@ -18,8 +18,28 @@
 function fact(n){
     let result = 1;
         for(let i = 1; i <= n; i++){
-            result *= i; 
+            result *= i;  // result = result * i
         }
     return result
 };
-console.log(fact(7));
+// console.log(fact(5));
+
+function factNumber(num){
+    if(num == 1){
+        return 1;
+    }
+    return num * factNumber(num-1);
+}
+let result = factNumber(6);
+console.log(result);
+
+/*
+factNumber(6)
+= 6 * factNumber(5)
+= 6 * (5 * factNumber(4))
+= 6 * 5 * (4 * factNumber(3))
+= 6 * 5 * 4 * (3 * factNumber(2))
+= 6 * 5 * 4 * 3 * (2 * factNumber(1))
+= 6 * 5 * 4 * 3 * 2 * 1
+= 720
+*/

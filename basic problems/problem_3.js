@@ -23,8 +23,8 @@ const largestNumber2 = ascendingNum[ascendingNum.length-1];
 let num1 = 50;
 let num2 = 25;
 let num3 = 45;
-// let largest = Math.max(num1, num2, num3);
-// console.log('The largest number is ' + largest); // 50
+let largest = Math.max(num1, num2, num3);
+// console.log(`The Largest Number is ${largest}`); // 50
 
 
 // way-4
@@ -41,5 +41,19 @@ if(num4 >= num5 && num4 >= num6){
     largest = num6; // অন্যথায় num6 বড়
 };
 
-console.log('The largest number is ' + largest); // 95
+console.log(`The Largest Number = ${largest}`) // 95
+
+
+/* let a = 25;
+let b = 35;
+let c = 20;
+
+if(a >= b && a>= c){
+    console.log(`The Largest Number is ${a}`);
+} else if (b >= a && b >= c){
+    console.log(`The Largest Number is ${b}`);
+} else{
+    console.log(`The Largest Number is ${c}`);
+};
+*/
 
