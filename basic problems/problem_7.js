@@ -19,3 +19,14 @@ for(let a =2; a<=5; a++){ // এখানে দুই থেকে শুরু
         // console.log(a + ' x ' + b + ' = ' + a * b);
     };
 };
+
+// Best Way
+
+function multiplication(num){
+    for (let i =1; i<=10; i++){
+        console.log(`${num} x ${i} = ${num * i}`)
+    }
+}
+multiplication(6);
+
+

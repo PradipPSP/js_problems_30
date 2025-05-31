@@ -35,9 +35,44 @@ console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
 
 function isPalindrome (str){
     str = str.toLowerCase().replace(/[^a-z0-9]/g, '');
-    const reversed = str.split('').reverse().join('');
+    let reversed = str.split('').reverse().join('');
     return str === reversed;
 }
 console.log(isPalindrome('madam')); // true
 console.log(isPalindrome('radar')); // true
 console.log(isPalindrome('hello JS')) // false
+
+// ব্যাখ্যা:
+// .split() ফাংশনটি একটি string-কে ভেঙে array-তে রূপান্তর করে, কোনো নির্দিষ্ট separator (বিভাজক) অনুসারে।
+
+// /[^a-z0-9]/g অর্থ RegExp (Regular Expression) যেখানে g মানে গ্লোবাল।
+
+/* RegEx বিশ্লেষণ:
+অংশ	মানে
+[...]	এটা একটি character set – এর মধ্যে যা থাকে তা খোঁজা হয়
+a-z	ছোট হাতের a থেকে z পর্যন্ত
+0-9	ডিজিট 0 থেকে 9 পর্যন্ত
+^ (caret)	NOT – মানে character set-এর মধ্যে যেগুলো নেই
+g	global flag – মানে স্ট্রিং-এ যতবার মেলে, সবগুলোতে replace হবে
+*/
+
+
+// way_2
+
+function reverseString(str){
+    let revStr = "";
+    for(let i =str.length-1; i>=0; i--){
+        revStr = revStr + str[i]
+    }
+    return revStr;
+};
+// console.log(reverseString("radar"))
+
+let mainWord = 'radar';
+let reverseMainWord = reverseString(mainWord);
+
+if(mainWord === reverseMainWord){
+    console.log(`${mainWord} is palindrome`);
+} else{
+    console.log(`${mainWord} isn't palindrome`)
+};
