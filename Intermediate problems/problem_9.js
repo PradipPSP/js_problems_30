@@ -1,23 +1,51 @@
 
 // Q. Write a function to capitalize the first letter of each word in a sentence?
 
+// way 1
+
 function capitalizeWords(sentence){
     return sentence
         .split(' ')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
         .join(' ');
 }
-console.log(capitalizeWords('i love my family'));
+// console.log(capitalizeWords('i love my family'));
 
+
+// way 2
 
 function capitalizeWord(sentence) {
     return sentence.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
 }
-console.log(capitalizeWord('i am a govt. service holder'))
+// console.log(capitalizeWord('i am a govt. service holder'))
+
+// way 3 
+
+function lastWordsCapitalize(sentence){
+    return sentence.replace(/\b\w+\b/g, word => {
+        if(word.length === 1) return word.toUpperCase();
+        let lastChar = word.slice(-1).toUpperCase();
+        return word.slice(0, -1).toLowerCase() + lastChar;
+    })
+}
+console.log(lastWordsCapitalize('i love my family'));
+
+/*
+🧠 কীভাবে কাজ করে:
+
+    \b\w+\b → প্রতিটি সম্পূর্ণ শব্দ ধরে।
+
+    word.slice(0, -1) → শব্দের শেষ অক্ষর বাদে বাকি অংশ।
+
+    word.slice(-1).toUpperCase() → শেষ অক্ষর বড় করা হয়।
+
+    সবশেষে দুটো অংশ একত্র করে রিটার্ন করা হয়।
+*/
+
+
 
 
 /*
-
 function capitalizeWords(sentence) {
     return sentence
         .split(' ')
